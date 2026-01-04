@@ -7,11 +7,7 @@
     "distribution": "private",
     "auth": {
       "type": "static",
-      "requiredScopes": [
-        "oauth",
-        "crm.objects.contacts.read",
-        "crm.objects.contacts.write"
-      ],
+      "requiredScopes": [],
       "optionalScopes": [],
       "conditionallyRequiredScopes": []
     },
@@ -22,8 +18,8 @@
     },
     "support": {
       "supportEmail": "daniel.picklo@gmail.com",
-      "documentationUrl": "https://github.com/danielpicklo/HS-MINESWEEPER",
-      "supportUrl": "https://github.com/danielpicklo/HS-MINESWEEPER/issues",
+      "documentationUrl": "https://github.com/danielpicklo/HMinesweeper/blob/main/README.md",
+      "supportUrl": "https://github.com/danielpicklo/HMinesweeper/issues",
       "supportPhone": ""
     }
   }
