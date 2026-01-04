@@ -190,38 +190,34 @@ const Extension = ({ context }) => {
 
   return (
     <>
-      <Flex direction="column" gap="medium" align="center">
-        <Heading>HMineSweeper</Heading>
-        <Flex direction="row" gap="medium">
-          {gameOver && <Alert title="Oh no!" variant="danger">This record has now been deleted. Have a nice day!</Alert>}
-          {gameWon && <Alert title="A winner is you!" variant="success">This record is safe for now...</Alert>}
-        </Flex>
-      </Flex>
-
       <Flex direction="column" gap="medium">
-        <Button onClick={resetGame} variant="secondary" size="medium">
-          <Icon name="robot" size="large" color={gameOver ? "alert" : "success"}/>
-        </Button>
 
-        <Divider />
-      </Flex>
+        {gameOver && <Alert title="Oh no!" variant="danger">This record has now been deleted. Have a nice day!</Alert>}
+        {gameWon && <Alert title="A winner is you!" variant="success">This record is safe for now...</Alert>}
 
-      <Flex direction="column" gap="extra-small">
-        {grid.map((row, rowIndex) =>
-          <Flex direction="row" gap="extra-small" wrap="nowrap">
-          {row.map((cell, colIndex) => (
-            <Button
-              key={`${rowIndex}-${colIndex}`}
-              onClick={() => handleCellClick(rowIndex, colIndex)}
-              variant={getCellVariant(cell)}
-              size="md"
-              disabled={ (!cell.isMine && (cell.isRevealed || gameOver)) || (cell.isMine && gameWon)}
-            >
-              {getCellText(cell)}
-            </Button>
-          ))}
-          </Flex>
-        )}
+        <Flex direction="column" gap="medium">
+          <Button onClick={resetGame} variant="secondary" size="medium">
+            <Icon name="robot" size="large" color={gameOver ? "alert" : "success"}/>
+          </Button>
+        </Flex>
+
+        <Flex direction="column" gap="extra-small">
+          {grid.map((row, rowIndex) =>
+            <Flex direction="row" gap="extra-small" wrap="nowrap">
+            {row.map((cell, colIndex) => (
+              <Button
+                key={`${rowIndex}-${colIndex}`}
+                onClick={() => handleCellClick(rowIndex, colIndex)}
+                variant={getCellVariant(cell)}
+                size="md"
+                disabled={ (!cell.isMine && (cell.isRevealed || gameOver)) || (cell.isMine && gameWon)}
+              >
+                {getCellText(cell)}
+              </Button>
+            ))}
+            </Flex>
+          )}
+        </Flex>
       </Flex>
     </>
   );
