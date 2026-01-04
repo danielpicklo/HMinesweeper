@@ -190,20 +190,17 @@ const Extension = ({ context }) => {
 
   return (
     <>
-      <Flex direction="column" gap="medium">
-        <Heading>Minesweeper</Heading>
-        {gameOver && <Alert title="Oh no!" variant="danger">Game Over! Click Reset to play again.</Alert>}
-        {gameWon && <Alert title="A winner is you!" variant="success">Game Over! Click Reset to play again.</Alert>}
-        {!gameOver && !gameWon && (
-          <Text>
-            Click cells to reveal them. Avoid the mines!
-          </Text>
-        )}
+      <Flex direction="column" gap="medium" align="center">
+        <Heading>HMineSweeper</Heading>
+        <Flex direction="row" gap="medium">
+          {gameOver && <Alert title="Oh no!" variant="danger">This record has now been deleted. Have a nice day!</Alert>}
+          {gameWon && <Alert title="A winner is you!" variant="success">This record is safe for now...</Alert>}
+        </Flex>
       </Flex>
 
       <Flex direction="column" gap="medium">
-        <Button onClick={resetGame} variant="primary" size="sm">
-          Reset Game
+        <Button onClick={resetGame} variant="secondary" size="medium">
+          <Icon name="robot" size="large" color={gameOver ? "alert" : "success"}/>
         </Button>
 
         <Divider />

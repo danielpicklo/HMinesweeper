@@ -3,7 +3,7 @@
   "type": "app",
   "config": {
     "description": "It ain't DOOM, but it's close.",
-    "name": "MineSweeper",
+    "name": "HMineSweeper",
     "distribution": "private",
     "auth": {
       "type": "static",
@@ -16,17 +16,15 @@
       "conditionallyRequiredScopes": []
     },
     "permittedUrls": {
-      "fetch": [
-        "https://api.hubapi.com"
-      ],
+      "fetch": [],
       "iframe": [],
       "img": []
     },
     "support": {
-      "supportEmail": "support@example.com",
-      "documentationUrl": "https://example.com/docs",
-      "supportUrl": "https://example.com/support",
-      "supportPhone": "+18005555555"
+      "supportEmail": "daniel.picklo@gmail.com",
+      "documentationUrl": "https://github.com/danielpicklo/HS-MINESWEEPER",
+      "supportUrl": "https://github.com/danielpicklo/HS-MINESWEEPER/issues",
+      "supportPhone": ""
     }
   }
 }
