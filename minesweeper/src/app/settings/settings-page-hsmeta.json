@@ -1,0 +1,7 @@
+{
+  "uid": "minesweeper_settings",
+  "type": "settings",
+  "config": {
+    "entrypoint": "/app/settings/SettingsPage.tsx"
+  }
+}

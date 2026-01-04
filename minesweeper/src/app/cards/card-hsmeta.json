@@ -1,0 +1,12 @@
+{
+  "uid": "minesweeper_card",
+  "type": "card",
+  "config": {
+    "name": "Minesweeper",
+    "location": "crm.record.tab",
+    "entrypoint": "/app/cards/MineSweeperCard.tsx",
+    "objectTypes": [
+      "contacts"
+    ]
+  }
+}
