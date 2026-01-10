@@ -24,7 +24,7 @@ It's Minesweeper. In HubSpot. On a CRM card. Because why not?
 
 ## Technical Details
 
-Built with HubSpot UI Extensions using only their "standard components" because apparently that's a thing. Uses `Button`, `Flex`, `Alert`, and other components that HubSpot deems worthy.
+Built with HubSpot UI Extensions using only their "standard components" because apparently that's a thing. Uses `Button`, `Flex`, `Alert`, and other components that HubSpot deems worthy. There are no scopes included with this app, so it is unable to interface with any data inside the account.
 
 ## Why?
 
